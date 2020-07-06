@@ -1,4 +1,4 @@
-# Download_GitHub_All_Repos_ZIP
+# Download GitHub repos ZIP
 A PowerShell script that allows you to download all ZIP archives from your GitHub account
 
 To proceed run the file **Download_Repos.ps1** with admin rights.
