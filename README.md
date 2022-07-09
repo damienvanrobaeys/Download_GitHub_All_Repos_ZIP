@@ -1,4 +1,10 @@
 # Download GitHub repos ZIP
+
+Run this command first
+
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope LocalMachine
+
+
 A PowerShell script that allows you to download all ZIP archives from your GitHub account
 
 To proceed run the file **Download_Repos.ps1**.
