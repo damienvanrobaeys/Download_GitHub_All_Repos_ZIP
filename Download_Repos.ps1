@@ -93,7 +93,22 @@ Try {
 }
 Catch {
 	Write_Info -Message_Type "ERROR" -Message "An error occured while connecting to GitHub"		
-	$GitHub_IsConnected = $False		
+	$GitHub_IsConnected = $False
+	
+	Try {
+	Set-GitHubConfiguration -DisableLogging
+	Set-GitHubAuthentication -Credential $cred -SessionOnly | out-null		
+	Write_Info -Message_Type "SUCCESS" -Message "Successfully connected to GitHub"		
+	$GitHub_IsConnected = $True
+}
+Catch {
+	Write_Info -Message_Type "ERROR" -Message "An error occured while connecting to GitHub"		
+	$GitHub_IsConnected = $False
+	
+
+
+}
+
 }
 write-host ""
 
